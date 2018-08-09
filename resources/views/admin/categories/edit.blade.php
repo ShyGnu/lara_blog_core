@@ -18,7 +18,7 @@
 								<div class="form-group">
 									<label class="control-label">Название</label>
 									<input type="text" id="firstName" name="title" class="form-control" value="{{$category->title}}">
-									<small class="form-control-feedback"> Введите название категории </small> 
+									<small class="form-control-feedback"> Введите новое название категории </small>
 								</div>
 							</div>
 						</div>

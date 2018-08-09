@@ -30,7 +30,7 @@
                                                 <td class="text-nowrap">
                                                     <a href="{{route('categories.edit', $category->id)}}" data-toggle="tooltip" data-original-title="Редактировать"> <i class="fa fa-pencil text-inverse m-r-10"></i> </a>
                                                     {{Form::open(['route'=>['categories.destroy', $category->id], 'method'=>'delete'])}}
-                                                    <button onclick="return confirm('Вы уверены что хотите удалить данный тег')" type="submit" class="delete">
+                                                    <button onclick="return confirm('Вы уверены что хотите удалить данную категорию')" type="submit" class="delete">
                                                     	<i class="fa fa-close text-danger"></i>
                                                     </button>
                                                     
