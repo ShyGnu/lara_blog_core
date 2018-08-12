@@ -76,6 +76,8 @@ class TagsController extends Controller
         return redirect()->route('tags.index');
     }
 
+
+
     /**
      * Remove the specified resource from storage.
      *
