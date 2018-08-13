@@ -15,8 +15,8 @@
                                 <th>ID</th>
                                 <th>Имя</th>
                                 <th>E-mail</th>
-                                <th>Аватар</th>
-                                <th>Действия</th>
+                                <th style="text-align: center;">Аватар</th>
+                                <th style="text-align: center;">Действия</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -25,8 +25,8 @@
                                     <td>{{$user->id}}</td>
                                     <td>{{$user->name}}</td>
                                     <td>{{$user->email}}</td>
-                                    <td><img style="max-width: 100px"; src="{{$user->getImage()}}" alt=""></td>
-                                    <td class="text-nowrap">
+                                    <td style="text-align: center;"><img style="max-width: 100px" src="{{$user->getAvatar()}}" alt=""></td>
+                                    <td style="text-align: center; padding-top: 50px" class="text-nowrap">
                                         <a href="{{route('users.edit', $user->id)}}" data-toggle="tooltip" data-original-title="Редактировать"> <i class="fa fa-pencil text-inverse m-r-10"></i> </a>
                                         {{Form::open(['route'=>['users.destroy', $user->id], 'method'=>'delete'])}}
                                         <button onclick="return confirm('Вы уверены что хотите удалить данного пользователя')" type="submit" class="delete">
