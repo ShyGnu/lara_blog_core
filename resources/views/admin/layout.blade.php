@@ -16,6 +16,7 @@
     <link href="/css/assets/plugins/calendar/dist/fullcalendar.css" rel="stylesheet" />
     <link href="/css/assets/css/style.css" rel="stylesheet">
     <link href="/css/assets/css/colors/blue.css" id="theme" rel="stylesheet">
+
     <style>
         table.table form
         {
