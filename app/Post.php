@@ -69,7 +69,7 @@ class Post extends Model
     public function removeImage()
     {
         if ($this->image != null) {
-            Storage::delete('uploads/' . $this->$image);
+            Storage::delete('uploads/' . $this->image);
         }
     }
     //upload thumnail image for post function
