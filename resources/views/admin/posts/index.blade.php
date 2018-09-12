@@ -5,10 +5,7 @@
     <div class="row">
         <div class="col-lg-12">
             <div class="card">
-                {{Form::open([
-                    'route' => 'posts.store',
-                    'files' => true
-                ])}}
+
                 <div class="card-body">
                     <h4 class="card-title">Листинг Новостей</h4>
                     @include('admin.errors')
@@ -37,7 +34,7 @@
                                 <td style="text-align: center; padding-top: 25px" class="text-nowrap">
                                     <a href="{{route('posts.edit', $post->id)}}" data-toggle="tooltip" data-original-title="Редактировать"> <i class="fa fa-pencil text-inverse m-r-10"></i> </a>
                                     {{Form::open(['route'=>['posts.destroy', $post->id], 'method'=>'delete'])}}
-                                    <button onclick="return confirm('Вы уверены что хотите удалить данную новость')" type="submit" class="delete">
+                                    <button onclick="return confirm('Вы уверены что хотите удалить данную категорию')" type="submit" class="delete">
                                         <i class="fa fa-close text-danger"></i>
                                     </button>
 
@@ -49,7 +46,7 @@
                         </table>
                     </div>
                 </div>
-                {{Form::close()}}
+
             </div>
         </div>
     </div>
@@ -57,7 +54,6 @@
 @endsection()
 
 @section('extension_scripts')
-    <script src="/js/assets/plugins/styleswitcher/jQuery.style.switcher.js"></script>
     <script src="/js/assets/plugins/datatables/jquery.dataTables.min.js"></script>
     <script>
         $(document).ready(function() {

@@ -235,8 +235,15 @@
     <script src='/js/assets/plugins/calendar/dist/fullcalendar.min.js'></script>
     <script src="/js/assets/plugins/calendar/dist/jquery.fullcalendar.js"></script>
     <script src="/js/assets/plugins/calendar/dist/cal-init.js"></script>
-    <script src="/js/assets/plugins/sparkline/jquery.sparkline.min.js"></script>
     <script src="/js/assets/plugins/styleswitcher/jQuery.style.switcher.js"></script>
+    <script src="/plugins/ckeditor/ckeditor.js"></script>
+    <script src="/plugins/ckfinder/ckfinder.js"></script>
+    <script>
+        $(document).ready(function(){
+            var editor = CKEDITOR.replaceAll();
+            CKFinder.setupCKEditor( editor );
+        })
+    </script>
  @yield('extension_scripts')   
 </body>
 

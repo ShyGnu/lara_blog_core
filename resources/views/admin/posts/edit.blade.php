@@ -40,7 +40,7 @@
                             <input type="text" class="form-control form-control-line" required data-validation-required-message="Это обязательное поле, пожалуйста заполните его" value="{{$post->title}}" name="title"> <span class="help-block text-muted"><small>Введите заголовок Новости.</small></span> </div>
                         <div class="form-group">
                             <img style="width: 250px;" src="{{$post->getImage()}}" alt="">
-                        <br>
+                            <br>
                             <label>Загрузить лицевое изображение</label>
                             <div class="fileinput fileinput-new input-group" data-provides="fileinput">
                                 <div class="form-control" data-trigger="fileinput"> <i class="glyphicon glyphicon-file fileinput-exists"></i> <span class="fileinput-filename"></span></div> <span class="input-group-addon btn btn-default btn-file"> <span class="fileinput-new">Выбрать файл</span> <span class="fileinput-exists">Change</span>
@@ -108,7 +108,6 @@
 @section('extension_scripts')
     <script src="/js/assets/plugins/select2/dist/js/select2.full.min.js" type="text/javascript"></script>
     <script src="/js/assets/plugins/switchery/dist/switchery.min.js"></script>
-    <script src="/js/assets/plugins/moment/moment.js"></script>
     <script src="/js/assets/plugins/bootstrap-material-datetimepicker/js/bootstrap-material-datetimepicker.js"></script>
     <!-- Clock Plugin JavaScript -->
     <script src="/js/assets/plugins/clockpicker/dist/jquery-clockpicker.min.js"></script>
@@ -123,7 +122,6 @@
     <!-- Date range Plugin JavaScript -->
     <script src="/js/assets/plugins/timepicker/bootstrap-timepicker.min.js"></script>
     <script src="/js/assets/plugins/bootstrap-daterangepicker/daterangepicker.js"></script>
-    <script src="/js/assets/plugins/styleswitcher/jQuery.style.switcher.js"></script>
     <script src="/js/assets/plugins/datatables/jquery.dataTables.min.js"></script>
     <script>
         // MAterial Date picker
