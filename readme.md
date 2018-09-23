@@ -112,8 +112,37 @@
 
 
 
-
+***
 ### Страница поста
-### Страница авторизации 
-### Страница регистрации
-### Ссылки авторизации
+
+Хлебные крошки
+```php
+{!! Breadcrumbs::render('category', $post) !!}
+```
+
+Вывод всех тегов
+```php
+@foreach($post->tags as $tag)
+    <a href="{{route('tag.show', $tag->slug)}}">{{$tag->title}}</a>
+@endforeach
+```
+
+Вывод категории с условием
+```php
+@if($post->hasCategory())
+    <a href="{{route('category.show', $post->category->slug)}}">{{$post->getCategorytitle()}}</a>
+@endif
+```
+
+Количество просмотров
+```php
+{{$post->views}}
+```
+
+Вывод контента
+```php
+{!! $post->content !!}
+```
+
+***
+
