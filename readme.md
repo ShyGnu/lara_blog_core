@@ -11,7 +11,7 @@
 
 Ниже представлены короткие вставки Shortcodes для взаимодействия с фронтендом страницы, необходимо в html верстку вставить необходимый шорткод с необходимыми параметрами 
 
-- [Листинг постов](#listing).
+- [Листинг постов](#Листинг-постов).
 - [Powerful dependency injection container](https://laravel.com/docs/container).
 - Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
 - Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
@@ -20,7 +20,7 @@
 - [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
 
-<h6 id="listing">Листинг Постов</h6>
+<h6>Листинг Постов</h6>
 
 Начало и конец цикла вывода постов
 
@@ -60,7 +60,7 @@
 {{$posts->links()}} //добавление пагинации к постам 
 ```
 
-### listing
+### Листинг постов
 Laravel is accessible, yet powerful, providing tools needed for large, robust applications. A superb combination of simplicity, elegance, and innovation give you tools you need to build any application with which you are tasked.
 
 ## Learning Laravel
