@@ -175,23 +175,7 @@
                     
                 </div>
                 <nav class="sidebar-nav">
-                    <ul id="sidebarnav">
-                        <li class="nav-small-cap">КОНТЕНТ</li>
-                        
-                        <li><a href="./index.html"><i class="mdi mdi-gauge"></i><span class="hide-menu">Админка</span></a></li>      
-                        <li><a href="./posts/index.html"><i class="mdi mdi-file"></i><span class="hide-menu">Новости</span></a></li> 
-                        <li><a href="./categories/index.html"><i class="mdi mdi-checkbox-blank-outline"></i><span class="hide-menu">Категории</span></a></li>
-                        <li><a href="./tags/index.html"><i class="mdi mdi-check"></i><span class="hide-menu">Теги</span></a></li>                         
-
-                        <li class="nav-devider"></li>
-                        
-                        <li class="nav-small-cap">НАСТРОЙКИ БЕКЕНДА</li>
-                        
-                        <li><a href="./users/index.html"><i class="mdi mdi-account-box"></i><span class="hide-menu">Пользователи</span></a></li>
-                        <li><a href="./subscribes/index.html"><i class="mdi mdi-email"></i><span class="hide-menu">Подписчики</span></a></li>
-                        <li><a href="./comments/index.html"><i class="mdi mdi-message-text-outline"></i><span class="hide-menu">Комментарии</span></a></li>
-        
-                    </ul>
+                    @include('admin._sidebar')
                 </nav>
 
             </div>
@@ -199,7 +183,7 @@
             <div class="sidebar-footer">
                 <a href="" class="link" data-toggle="tooltip" title="Настройки"><i class="ti-settings"></i></a>
                 <a href="" class="link" data-toggle="tooltip" title="Email"><i class="mdi mdi-gmail"></i></a>
-                <a href="" class="link" data-toggle="tooltip" title="Выйти с учетной записи"><i class="mdi mdi-power"></i></a>
+                <a href="/logout" class="link" data-toggle="tooltip" title="Выйти с учетной записи"><i class="mdi mdi-power"></i></a>
             </div>
         </aside>
 

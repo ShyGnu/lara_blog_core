@@ -84,9 +84,15 @@
                             <input type="checkbox" id="basic_checkbox_2" name="status"/>
                             <label for="basic_checkbox_2">Черновик</label>
                         </div>
+
+                        <div class="form-group">
+                            <label>Описание</label>
+                            <textarea name="description" class="form-control" rows="5"></textarea>
+                        </div>
+
                         <div class="form-group">
                             <label>Полный текст</label>
-                            <textarea name="content" class="form-control" rows="5"></textarea>
+                            <textarea name="content" class="form-control" rows="5">{{old('description')}}</textarea>
                         </div>
 
                         <div class="text-xs-right">

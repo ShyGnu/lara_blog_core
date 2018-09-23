@@ -2,6 +2,7 @@
 
 namespace App;
 
+use Carbon\Carbon;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Database\Eloquent\Model;
 use Cviebrock\EloquentSluggable\Sluggable;
@@ -13,7 +14,7 @@ class Post extends Model
     const IS_DRAFT = 0;
     const IS_PUBLIC = 1;
 
-    protected $fillable = ['title', 'content', 'date'];
+    protected $fillable = ['title', 'content', 'date', 'description'];
 
     public function category()
     {
@@ -165,5 +166,21 @@ class Post extends Model
             :   'Нет тегов';
     }
 
+    public function getCategoryID()
+    {
+        return $this->category != null ? $this ->category-> id : null;
+    }
+
+    public function hasCategory()
+    {
+        return $this->category != null ? true : false;
+    }
+
+
+
+    //public function getDate()
+    //{
+    //    dd(Carbon::createFromFormat('y-md', $this->date)->format('F d, Y'));
+    //}
 }
 

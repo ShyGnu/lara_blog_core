@@ -53,7 +53,7 @@
                             <label>Укажите категорию</label>
                             {{Form::select('category_id',
                             $categories,
-                            $post->category->id,
+                            $post->getCategoryID(),
                             ['class' => 'form-control'])
                             }}
                             <span class="help-block text-muted"><small>Выберите категорию из списка, если категории нету создайте новую на соответствующей странице.</small></span>
@@ -87,6 +87,10 @@
 
                             {{Form::checkbox('status', '1', $post->status, ['id' => 'basic_checkbox_2'])}}
                             <label for="basic_checkbox_2">Черновик</label>
+                        </div>
+                        <div class="form-group">
+                            <label>Описание</label>
+                            <textarea name="description" class="form-control" rows="5" value="lorem">{{$post->description}}</textarea>
                         </div>
                         <div class="form-group">
                             <label>Полный текст</label>
