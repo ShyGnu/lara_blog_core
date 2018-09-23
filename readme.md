@@ -7,11 +7,11 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
 
-## About Laravel
+## Страница новостей
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as:
+Ниже представлены короткие вставки Shortcodes для взаимодействия с фронтендом страницы, необходимо в html верстку вставить необходимый шорткод с необходимыми параметрами 
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
+- [Листинг постов](#listing).
 - [Powerful dependency injection container](https://laravel.com/docs/container).
 - Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
 - Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
@@ -19,6 +19,48 @@ Laravel is a web application framework with expressive, elegant syntax. We belie
 - [Robust background job processing](https://laravel.com/docs/queues).
 - [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
+
+<h6 id="listing">Листинг Постов</h6>
+
+Начало и конец цикла вывода постов
+
+```php
+ @foreach($posts as $post)
+ ...
+ @endforeach 
+```
+
+вывод изображения поста
+
+```php
+<img src="{{$post->getImage()}}" alt="">
+```
+
+вывод заголовока поста и ссылки на него
+
+```php
+<a href="{{route('news.show', $post->slug)}}">{{$post->title}}</a>
+```
+
+вывод даты 
+
+
+```php
+{{$post->date}}
+```
+
+краткое описание поста
+
+```php
+{!! $post->description !!}
+```
+
+Добавление пагинации к постам
+```php
+{{$posts->links()}} //добавление пагинации к постам 
+```
+
+### listing
 Laravel is accessible, yet powerful, providing tools needed for large, robust applications. A superb combination of simplicity, elegance, and innovation give you tools you need to build any application with which you are tasked.
 
 ## Learning Laravel
